@@ -1,12 +1,12 @@
-# PAW Testnets
+# PAW Networks
 
-This repository contains genesis files, configuration, and documentation for PAW public testnets.
+This repository contains genesis files, configuration, and documentation for PAW development networks.
 
-## Active Testnets
+## Active Networks
 
 | Network | Chain ID | Status |
 |---------|----------|--------|
-| [paw-testnet-1](./paw-testnet-1/) | `paw-testnet-1` | Active |
+| [paw-testnet-1](./paw-testnet-1/) | `paw-testnet-1` | Devnet |
 
 ## Resources
 

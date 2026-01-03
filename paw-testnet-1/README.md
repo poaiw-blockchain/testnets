@@ -1,6 +1,6 @@
-# PAW Testnet 1
+# PAW Devnet (paw-testnet-1)
 
-Public testnet for the PAW blockchain.
+Development network for the PAW blockchain. Access is limited to approved developers and contributors.
 
 ## Chain Information
 
@@ -55,4 +55,4 @@ https://artifacts.poaiw.org
 
 ## Faucet
 
-Request testnet tokens in the PAW Discord.
+Contact the PAW team for devnet tokens.
