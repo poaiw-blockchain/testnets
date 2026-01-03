@@ -1,6 +1,15 @@
 # PAW Devnet (paw-testnet-1)
 
-Development network for the PAW blockchain. Access is limited to approved developers and contributors.
+Development network for the PAW blockchain.
+
+## Access
+
+This devnet is currently limited to approved developers and contributors. To request access:
+
+1. Review the [PAW documentation](https://github.com/poaiw-blockchain/paw)
+2. Contact the PAW team to request devnet tokens
+
+Artifacts (genesis, binaries, configs) are publicly available. Token distribution requires approval.
 
 ## Chain Information
 
@@ -10,6 +19,13 @@ Development network for the PAW blockchain. Access is limited to approved develo
 | Genesis Time | 2025-12-31T08:20:09Z |
 | Native Denom | `upaw` |
 | Binary | `pawd` |
+
+## Public Resources
+
+| Resource | URL |
+|----------|-----|
+| Explorer | https://explorer.poaiw.org |
+| Artifacts | https://artifacts.poaiw.org |
 
 ## Endpoints
 
@@ -48,11 +64,6 @@ persistent_peers = "0aa94130db435f9f46c2f1d295d45ebf6da89e02@54.39.103.49:26656"
 pawd start --home ~/.paw
 ```
 
-## Artifacts
+### 4. Request tokens
 
-Genesis and configuration files are also available at:
-https://artifacts.poaiw.org
-
-## Faucet
-
-Contact the PAW team for devnet tokens.
+Contact the PAW team after your node is synced to receive devnet tokens.
