@@ -1,0 +1,144 @@
+# PAW Testnet Example Configuration
+# Copy this file to ~/.paw/config/app.toml
+
+###############################################################################
+###                           Base Configuration                            ###
+###############################################################################
+
+# Minimum gas prices for transactions
+minimum-gas-prices = "0.001upaw"
+
+# Pruning strategy (default|nothing|everything|custom)
+pruning = "default"
+
+# Custom pruning settings (only applicable if pruning = "custom")
+pruning-keep-recent = "100"
+pruning-keep-every = "0"
+pruning-interval = "10"
+
+# Halt height (0 = disabled)
+halt-height = 0
+
+# Halt time (0 = disabled)
+halt-time = 0
+
+# Minimum percentage of total validators required to send valid votes
+min-retain-blocks = 0
+
+# Inter block cache
+inter-block-cache = true
+
+# Index events (true = all events, false = no events)
+index-events = []
+
+# IAVL cache size (number of nodes)
+iavl-cache-size = 781250
+
+# Disable IAVL fast node
+iavl-disable-fastnode = false
+
+###############################################################################
+###                         Telemetry Configuration                         ###
+###############################################################################
+
+[telemetry]
+service-name = ""
+enabled = false
+enable-hostname = false
+enable-hostname-label = false
+enable-service-label = false
+prometheus-retention-time = 0
+global-labels = []
+
+###############################################################################
+###                           API Configuration                             ###
+###############################################################################
+
+[api]
+# Enable API server
+enable = true
+
+# Swagger documentation
+swagger = true
+
+# API address
+address = "tcp://0.0.0.0:1317"
+
+# Maximum number of simultaneous connections
+max-open-connections = 1000
+
+# Read timeout
+rpc-read-timeout = 10
+
+# Write timeout
+rpc-write-timeout = 0
+
+# Max body bytes for requests
+rpc-max-body-bytes = 1000000
+
+# Enable unsafe CORS
+enabled-unsafe-cors = true
+
+###############################################################################
+###                           gRPC Configuration                            ###
+###############################################################################
+
+[grpc]
+# Enable gRPC server
+enable = true
+
+# gRPC address
+address = "0.0.0.0:9090"
+
+# Maximum receive message size
+max-recv-msg-size = "10485760"
+
+# Maximum send message size
+max-send-msg-size = "2147483647"
+
+###############################################################################
+###                        gRPC Web Configuration                           ###
+###############################################################################
+
+[grpc-web]
+# Enable gRPC-web gateway
+enable = true
+
+# gRPC-web address
+address = "0.0.0.0:9091"
+
+# Enable unsafe CORS
+enable-unsafe-cors = true
+
+###############################################################################
+###                        State Sync Configuration                         ###
+###############################################################################
+
+[state-sync]
+# Snapshot interval (0 = disabled)
+snapshot-interval = 1000
+
+# Snapshot retention (how many snapshots to keep)
+snapshot-keep-recent = 2
+
+###############################################################################
+###                         Mempool Configuration                           ###
+###############################################################################
+
+[mempool]
+# Maximum number of transactions in mempool
+max-txs = 5000
+
+###############################################################################
+###                         Wasm Configuration                              ###
+###############################################################################
+
+[wasm]
+# Smart query gas limit
+query_gas_limit = 300000
+
+# Memory cache size in MiB
+memory_cache_size = 100
+
+# Simulation gas limit (0 = no limit)
+simulation_gas_limit = 0

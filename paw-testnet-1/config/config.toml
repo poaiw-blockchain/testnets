@@ -1,0 +1,330 @@
+# PAW Testnet Example Configuration
+# Copy this file to ~/.paw/config/config.toml
+
+###############################################################################
+###                           Base Configuration                            ###
+###############################################################################
+
+# Tendermint proxy app address
+proxy_app = "tcp://127.0.0.1:26658"
+
+# Node moniker (customize this)
+moniker = "my-paw-node"
+
+# Fast sync mode (true = enabled)
+fast_sync = true
+
+# Database backend (goleveldb|cleveldb|boltdb|rocksdb|badgerdb)
+db_backend = "goleveldb"
+
+# Database directory
+db_dir = "data"
+
+# Log output level
+log_level = "info"
+
+# Log format (plain|json)
+log_format = "plain"
+
+# Genesis file
+genesis_file = "config/genesis.json"
+
+# Private validator key
+priv_validator_key_file = "config/priv_validator_key.json"
+
+# Private validator state
+priv_validator_state_file = "data/priv_validator_state.json"
+
+# Private validator laddr
+priv_validator_laddr = ""
+
+# Node key
+node_key_file = "config/node_key.json"
+
+# ABCI mechanism (socket|grpc)
+abci = "socket"
+
+# Filter peers by address ID
+filter_peers = false
+
+###############################################################################
+###                           RPC Configuration                             ###
+###############################################################################
+
+[rpc]
+# RPC listen address
+laddr = "tcp://0.0.0.0:26657"
+
+# CORS allowed origins
+cors_allowed_origins = ["*"]
+
+# CORS allowed methods
+cors_allowed_methods = ["HEAD", "GET", "POST"]
+
+# CORS allowed headers
+cors_allowed_headers = ["Origin", "Accept", "Content-Type", "X-Requested-With", "X-Server-Time"]
+
+# gRPC listen address (empty = disabled)
+grpc_laddr = ""
+
+# gRPC max open connections
+grpc_max_open_connections = 900
+
+# Unsafe RPC commands (true = enabled)
+unsafe = false
+
+# Max open connections
+max_open_connections = 900
+
+# Maximum subscription clients
+max_subscription_clients = 100
+
+# Maximum subscriptions per client
+max_subscriptions_per_client = 5
+
+# Timeout for broadcast commit
+timeout_broadcast_tx_commit = "10s"
+
+# Max body bytes
+max_body_bytes = 1000000
+
+# Max header bytes
+max_header_bytes = 1048576
+
+# TLS cert file
+tls_cert_file = ""
+
+# TLS key file
+tls_key_file = ""
+
+# Block results streaming buffer size
+experimental_subscription_buffer_size = 200
+
+# WebSocket write wait
+experimental_websocket_write_buffer_size = 200
+
+# Close slow clients
+experimental_close_on_slow_client = false
+
+###############################################################################
+###                           P2P Configuration                             ###
+###############################################################################
+
+[p2p]
+# P2P listen address
+laddr = "tcp://0.0.0.0:26656"
+
+# External address
+external_address = ""
+
+# Seed nodes
+seeds = "0aa94130db435f9f46c2f1d295d45ebf6da89e02@54.39.103.49:26656"
+
+# Persistent peers
+persistent_peers = "0aa94130db435f9f46c2f1d295d45ebf6da89e02@54.39.103.49:26656"
+
+# UPNP port forwarding
+upnp = false
+
+# Address book file
+addr_book_file = "config/addrbook.json"
+
+# Strict address book
+addr_book_strict = false
+
+# Maximum inbound peers
+max_num_inbound_peers = 40
+
+# Maximum outbound peers
+max_num_outbound_peers = 10
+
+# Unconditional peer IDs
+unconditional_peer_ids = ""
+
+# Persistent peer IDs
+persistent_peers_max_dial_period = "0s"
+
+# Flush throttle timeout
+flush_throttle_timeout = "100ms"
+
+# Maximum packet message payload size
+max_packet_msg_payload_size = 1024
+
+# Send rate
+send_rate = 5120000
+
+# Receive rate
+recv_rate = 5120000
+
+# PEX (peer exchange)
+pex = true
+
+# Seed mode
+seed_mode = false
+
+# Private peer IDs
+private_peer_ids = ""
+
+# Allow duplicate IP
+allow_duplicate_ip = false
+
+# Handshake timeout
+handshake_timeout = "20s"
+
+# Dial timeout
+dial_timeout = "3s"
+
+###############################################################################
+###                         Mempool Configuration                           ###
+###############################################################################
+
+[mempool]
+# Recheck transactions
+recheck = true
+
+# Broadcast transactions
+broadcast = true
+
+# WAL directory
+wal_dir = ""
+
+# Size
+size = 5000
+
+# Max txs bytes
+max_txs_bytes = 1073741824
+
+# Cache size
+cache_size = 10000
+
+# Keep invalid txs in cache
+keep-invalid-txs-in-cache = false
+
+# Max tx bytes
+max_tx_bytes = 1048576
+
+# Max batch bytes
+max_batch_bytes = 0
+
+###############################################################################
+###                        State Sync Configuration                         ###
+###############################################################################
+
+[statesync]
+# Enable state sync
+enable = false
+
+# RPC servers (2 required for trust verification)
+rpc_servers = ""
+
+# Trust height
+trust_height = 0
+
+# Trust hash
+trust_hash = ""
+
+# Trust period
+trust_period = "168h0m0s"
+
+# Discovery time
+discovery_time = "15s"
+
+# Temp directory
+temp_dir = ""
+
+# Chunk request timeout
+chunk_request_timeout = "10s"
+
+# Chunk fetchers
+chunk_fetchers = "4"
+
+###############################################################################
+###                       Fast Sync Configuration                           ###
+###############################################################################
+
+[fastsync]
+# Fast sync version (v0|v1|v2)
+version = "v0"
+
+###############################################################################
+###                         Consensus Configuration                         ###
+###############################################################################
+
+[consensus]
+# WAL file
+wal_file = "data/cs.wal/wal"
+
+# Propose timeout
+timeout_propose = "3s"
+
+# Propose delta
+timeout_propose_delta = "500ms"
+
+# Prevote timeout
+timeout_prevote = "1s"
+
+# Prevote delta
+timeout_prevote_delta = "500ms"
+
+# Precommit timeout
+timeout_precommit = "1s"
+
+# Precommit delta
+timeout_precommit_delta = "500ms"
+
+# Commit timeout
+timeout_commit = "5s"
+
+# Double sign check height
+double_sign_check_height = 0
+
+# Skip commit timeout
+skip_timeout_commit = false
+
+# Create empty blocks
+create_empty_blocks = true
+
+# Create empty blocks interval
+create_empty_blocks_interval = "0s"
+
+# Peer gossip sleep duration
+peer_gossip_sleep_duration = "100ms"
+
+# Peer query maj 23 sleep duration
+peer_query_maj23_sleep_duration = "2s"
+
+###############################################################################
+###                         Storage Configuration                           ###
+###############################################################################
+
+[storage]
+# Discard ABCI responses
+discard_abci_responses = false
+
+###############################################################################
+###                       Transaction Indexer Configuration                 ###
+###############################################################################
+
+[tx_index]
+# Indexer type (null|kv|psql)
+indexer = "kv"
+
+# PostgreSQL connection string (if indexer = psql)
+psql-conn = ""
+
+###############################################################################
+###                         Instrumentation Configuration                   ###
+###############################################################################
+
+[instrumentation]
+# Prometheus enabled
+prometheus = true
+
+# Prometheus listen address
+prometheus_listen_addr = ":26660"
+
+# Maximum open connections
+max_open_connections = 3
+
+# Namespace
+namespace = "tendermint"
