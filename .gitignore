@@ -1,0 +1,48 @@
+# Claude Code directories
+.claude/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Binary files
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.o
+*.a
+
+# Node configuration with private keys (DO NOT COMMIT)
+priv_validator_key.json
+node_key.json
+
+# Environment and credentials
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Build artifacts
+build/
+dist/
+*.tar.gz
+*.tar.lz4
+*.zip
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
