@@ -1,0 +1,84 @@
+{
+  "$schema": "../chain.schema.json",
+  "chain_name": "pawtestnet",
+  "status": "live",
+  "network_type": "testnet",
+  "chain_type": "cosmos",
+  "pretty_name": "PAW Testnet",
+  "chain_id": "paw-testnet-1",
+  "bech32_prefix": "paw",
+  "daemon_name": "pawd",
+  "node_home": "$HOME/.paw",
+  "key_algos": ["secp256k1"],
+  "slip44": 118,
+  "fees": {
+    "fee_tokens": [
+      {
+        "denom": "upaw",
+        "fixed_min_gas_price": 0.001,
+        "low_gas_price": 0.001,
+        "average_gas_price": 0.002,
+        "high_gas_price": 0.003
+      }
+    ]
+  },
+  "staking": {
+    "staking_tokens": [
+      {
+        "denom": "upaw"
+      }
+    ]
+  },
+  "codebase": {
+    "git_repo": "https://github.com/poaiw-blockchain/paw",
+    "recommended_version": "v0.1.0",
+    "compatible_versions": ["v0.1.0"],
+    "genesis": {
+      "genesis_url": "https://artifacts.poaiw.org/genesis.json"
+    }
+  },
+  "peers": {
+    "seeds": [
+      {
+        "id": "0aa94130db435f9f46c2f1d295d45ebf6da89e02",
+        "address": "54.39.103.49:26656",
+        "provider": "PAW Foundation"
+      }
+    ],
+    "persistent_peers": [
+      {
+        "id": "0aa94130db435f9f46c2f1d295d45ebf6da89e02",
+        "address": "54.39.103.49:26656",
+        "provider": "PAW Foundation"
+      }
+    ]
+  },
+  "apis": {
+    "rpc": [
+      {
+        "address": "https://testnet-rpc.poaiw.org",
+        "provider": "PAW Foundation"
+      }
+    ],
+    "rest": [
+      {
+        "address": "https://testnet-api.poaiw.org",
+        "provider": "PAW Foundation"
+      }
+    ],
+    "grpc": [
+      {
+        "address": "testnet-grpc.poaiw.org:443",
+        "provider": "PAW Foundation"
+      }
+    ]
+  },
+  "explorers": [
+    {
+      "kind": "PAW Explorer",
+      "url": "https://testnet-explorer.poaiw.org",
+      "tx_page": "https://testnet-explorer.poaiw.org/tx/${txHash}",
+      "account_page": "https://testnet-explorer.poaiw.org/account/${accountAddress}"
+    }
+  ]
+}
