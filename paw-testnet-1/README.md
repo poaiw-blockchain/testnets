@@ -2,14 +2,24 @@
 
 Development network for the PAW blockchain.
 
-## Access
+## Become a Contributor
 
-This devnet is currently limited to approved developers and contributors. To request access:
+This devnet is for developers interested in long-term contribution to the PAW project. We're building a team of committed contributors to help develop, test, and improve the network before public launch.
 
-1. Review the [PAW documentation](https://github.com/poaiw-blockchain/paw)
-2. Contact the PAW team to request devnet tokens
+### How to Apply
 
-Artifacts (genesis, binaries, configs) are publicly available. Token distribution requires approval.
+Choose any of the following methods:
+
+1. **GitHub** - [Submit a Devnet Access Request](https://github.com/poaiw-blockchain/testnets/issues/new?template=devnet-access.yml)
+2. **Email** - Contact dev@poaiw.org with your background and interest
+3. **Discord** - Join [discord.gg/paw](https://discord.gg/paw) and introduce yourself in #devnet-applications
+
+### What We're Looking For
+
+- Developers with blockchain, Cosmos SDK, or IBC experience
+- Contributors interested in verifiable AI compute, DEX, or oracle modules
+- Long-term commitment to the project
+- Validators, node operators, and SDK developers
 
 ## Chain Information
 
@@ -22,10 +32,13 @@ Artifacts (genesis, binaries, configs) are publicly available. Token distributio
 
 ## Public Resources
 
+These resources are publicly accessible:
+
 | Resource | URL |
 |----------|-----|
 | Explorer | https://explorer.poaiw.org |
 | Artifacts | https://artifacts.poaiw.org |
+| Documentation | https://github.com/poaiw-blockchain/paw |
 
 ## Endpoints
 
@@ -42,7 +55,9 @@ Artifacts (genesis, binaries, configs) are publicly available. Token distributio
 0aa94130db435f9f46c2f1d295d45ebf6da89e02@54.39.103.49:26656
 ```
 
-## Quick Start
+## Quick Start (After Approval)
+
+Once your access request is approved:
 
 ### 1. Download genesis
 
@@ -64,6 +79,6 @@ persistent_peers = "0aa94130db435f9f46c2f1d295d45ebf6da89e02@54.39.103.49:26656"
 pawd start --home ~/.paw
 ```
 
-### 4. Request tokens
+### 4. Receive tokens
 
-Contact the PAW team after your node is synced to receive devnet tokens.
+After approval, you'll receive devnet tokens to your provided wallet address.

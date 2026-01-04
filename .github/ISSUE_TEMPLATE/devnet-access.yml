@@ -1,0 +1,105 @@
+name: Devnet Access Request
+description: Request access to the PAW devnet as a contributor
+title: "[Access Request] "
+labels: ["access-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## PAW Devnet Access Request
+
+        We're looking for developers interested in long-term contribution to the PAW project. Please provide the following information so we can review your application.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Your name or pseudonym
+      placeholder: e.g., John Doe
+    validations:
+      required: true
+
+  - type: input
+    id: github
+    attributes:
+      label: GitHub Username
+      description: Your GitHub handle
+      placeholder: e.g., johndoe
+    validations:
+      required: true
+
+  - type: input
+    id: discord
+    attributes:
+      label: Discord Username
+      description: Your Discord handle (optional, for faster communication)
+      placeholder: e.g., johndoe#1234
+    validations:
+      required: false
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Background
+      description: Tell us about your development experience, particularly with blockchain, Cosmos SDK, AI/ML, or related technologies.
+      placeholder: |
+        - 3 years of Go development
+        - Experience with IBC and cross-chain protocols
+        - Built AI compute pipelines
+    validations:
+      required: true
+
+  - type: textarea
+    id: interest
+    attributes:
+      label: Interest in PAW
+      description: What draws you to the PAW project? What aspects are you most interested in contributing to?
+      placeholder: |
+        I'm interested in the verifiable AI compute modules and the DEX integration...
+    validations:
+      required: true
+
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Planned Contributions
+      description: What do you plan to build, test, or contribute? We're looking for developers committed to ongoing involvement.
+      placeholder: |
+        - Run a validator node
+        - Develop compute verification modules
+        - Build DEX trading interfaces
+        - Contribute to oracle development
+    validations:
+      required: true
+
+  - type: dropdown
+    id: commitment
+    attributes:
+      label: Time Commitment
+      description: How much time can you dedicate to the project?
+      options:
+        - Full-time contributor
+        - Part-time (10-20 hours/week)
+        - Occasional (5-10 hours/week)
+        - Exploring the project first
+    validations:
+      required: true
+
+  - type: input
+    id: wallet
+    attributes:
+      label: PAW Wallet Address
+      description: Your paw1... address for receiving devnet tokens (create one using `pawd keys add <name>`)
+      placeholder: paw1...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Acknowledgment
+      options:
+        - label: I understand this is a development network and tokens have no monetary value
+          required: true
+        - label: I am interested in contributing to the PAW project long-term
+          required: true

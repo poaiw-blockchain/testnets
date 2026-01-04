@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Email
+    url: mailto:dev@poaiw.org
+    about: Contact us directly via email for devnet access
+  - name: Discord
+    url: https://discord.gg/paw
+    about: Join our Discord and request access in #devnet-applications
