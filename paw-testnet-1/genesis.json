@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2025-12-31T08:20:09.909280927Z",
+  "genesis_time": "2026-01-05T19:19:45.274019528Z",
   "chain_id": "paw-testnet-1",
   "initial_height": "1",
   "consensus_params": {
@@ -31,7 +31,7 @@
         "type": "tendermint/PubKeyEd25519",
         "value": "66rK0M+rKzMZ9i+350c2uh7XpDo6f6fg9Nyq8fh+V30="
       },
-      "power": "100000",
+      "power": "50000000",
       "name": "paw-testnet"
     }
   ],
@@ -42,14 +42,14 @@
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
           "account_number": "0",
-          "address": "paw1sh6fvz86mm5ummssg9fwa4umcz5sx92n374y3r",
+          "address": "pawtest17gczusrvmgg6flht278r9cg2jnpgsnzmhxgqnp",
           "pub_key": null,
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
           "account_number": "1",
-          "address": "paw1kp0g6g2532svlj00y4sdysgq5mqu3m0lzas35v",
+          "address": "pawtest1fa0g20zm96n5rsltxa05qgsngy0mx8ks5mn23p",
           "pub_key": null,
           "sequence": "0"
         }
@@ -69,29 +69,29 @@
       },
       "balances": [
         {
-          "address": "paw1sh6fvz86mm5ummssg9fwa4umcz5sx92n374y3r",
+          "address": "pawtest1fa0g20zm96n5rsltxa05qgsngy0mx8ks5mn23p",
           "coins": [
             {
               "denom": "upaw",
-              "amount": "900000000000"
+              "amount": "1000000000000"
             }
           ]
         },
         {
-          "address": "paw1kp0g6g2532svlj00y4sdysgq5mqu3m0lzas35v",
+          "address": "pawtest17gczusrvmgg6flht278r9cg2jnpgsnzmhxgqnp",
           "coins": [
             {
               "denom": "upaw",
-              "amount": "500000000000"
+              "amount": "50000000000000"
             }
           ]
         },
         {
-          "address": "paw1fl48vsnmsdzcv85q5d2q4z5ajdha8yu3m6k9nd",
+          "address": "pawtest1fl48vsnmsdzcv85q5d2q4z5ajdha8yu3l8u3uf",
           "coins": [
             {
               "denom": "upaw",
-              "amount": "100000000000"
+              "amount": "50000000000000"
             }
           ]
         }
@@ -99,7 +99,7 @@
       "supply": [
         {
           "denom": "upaw",
-          "amount": "1500000000000"
+          "amount": "101000000000000"
         }
       ],
       "denom_metadata": [],
@@ -142,6 +142,7 @@
         "nonce_retention_blocks": "17280",
         "provider_cache_refresh_interval": "100",
         "provider_cache_size": "10",
+        "reputation_decay_percent": "100",
         "reputation_slash_percentage": "10",
         "request_cooldown_blocks": "10",
         "stake_slash_percentage": "1",
@@ -355,9 +356,9 @@
       },
       "signing_infos": [
         {
-          "address": "pawvalcons1y7tkj73fqxashx9arf4t9mtvukkzlwz9p6xcy8",
+          "address": "pawtestvalcons1y7tkj73fqxashx9arf4t9mtvukkzlwz94e4g74",
           "validator_signing_info": {
-            "address": "pawvalcons1y7tkj73fqxashx9arf4t9mtvukkzlwz9p6xcy8",
+            "address": "pawtestvalcons1y7tkj73fqxashx9arf4t9mtvukkzlwz94e4g74",
             "start_height": "0",
             "index_offset": "0",
             "jailed_until": "1970-01-01T00:00:00Z",
@@ -377,24 +378,24 @@
         "bond_denom": "upaw",
         "min_commission_rate": "0.000000000000000000"
       },
-      "last_total_power": "100000",
+      "last_total_power": "50000000",
       "last_validator_powers": [
         {
-          "address": "pawvaloper1sh6fvz86mm5ummssg9fwa4umcz5sx92nw52rxn",
-          "power": "100000"
+          "address": "pawtestvaloper17gczusrvmgg6flht278r9cg2jnpgsnzmcjwr38",
+          "power": "50000000"
         }
       ],
       "validators": [
         {
-          "operator_address": "pawvaloper1sh6fvz86mm5ummssg9fwa4umcz5sx92nw52rxn",
+          "operator_address": "pawtestvaloper17gczusrvmgg6flht278r9cg2jnpgsnzmcjwr38",
           "consensus_pubkey": {
             "@type": "/cosmos.crypto.ed25519.PubKey",
             "key": "66rK0M+rKzMZ9i+350c2uh7XpDo6f6fg9Nyq8fh+V30="
           },
           "jailed": false,
           "status": "BOND_STATUS_BONDED",
-          "tokens": "100000000000",
-          "delegator_shares": "100000000000.000000000000000000",
+          "tokens": "50000000000000",
+          "delegator_shares": "50000000000000.000000000000000000",
           "description": {
             "moniker": "paw-testnet",
             "identity": "",
@@ -419,9 +420,9 @@
       ],
       "delegations": [
         {
-          "delegator_address": "paw1sh6fvz86mm5ummssg9fwa4umcz5sx92n374y3r",
-          "validator_address": "pawvaloper1sh6fvz86mm5ummssg9fwa4umcz5sx92nw52rxn",
-          "shares": "100000000000.000000000000000000"
+          "delegator_address": "pawtest17gczusrvmgg6flht278r9cg2jnpgsnzmhxgqnp",
+          "validator_address": "pawtestvaloper17gczusrvmgg6flht278r9cg2jnpgsnzmcjwr38",
+          "shares": "50000000000000.000000000000000000"
         }
       ],
       "unbonding_delegations": [],

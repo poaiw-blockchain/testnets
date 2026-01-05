@@ -7,10 +7,10 @@ Development network for the PAW blockchain - a Cosmos SDK chain focused on verif
 | Property | Value |
 |----------|-------|
 | Chain ID | `paw-testnet-1` |
-| Genesis Time | 2025-12-31T08:20:09Z |
+| Genesis Time | 2026-01-05T19:19:45Z |
 | Native Denom | `upaw` |
 | Binary | `pawd` |
-| Bech32 Prefix | `paw` |
+| Bech32 Prefix | `pawtest` |
 | Cosmos SDK | v0.50.x |
 | Go Version | 1.22+ |
 
