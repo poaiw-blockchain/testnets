@@ -18,6 +18,7 @@ Thumbs.db
 *.bin
 *.o
 *.a
+*.test
 
 # Node configuration with private keys (DO NOT COMMIT)
 priv_validator_key.json
@@ -26,8 +27,17 @@ node_key.json
 # Environment and credentials
 .env
 .env.*
+!.env.example
+!.env.*.example
+!.env.template
+!.env.*.template
 *.pem
 *.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+*.mnemonic
 credentials.json
 secrets.json
 
@@ -36,6 +46,7 @@ build/
 dist/
 *.tar.gz
 *.tar.lz4
+*.tar.bz2
 *.zip
 
 # Logs
