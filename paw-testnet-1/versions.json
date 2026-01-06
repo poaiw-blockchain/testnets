@@ -1,25 +1,12 @@
 {
-  "$schema": "../versions.schema.json",
-  "chain_name": "pawtestnet",
+  "chain_id": "paw-testnet-1",
   "versions": [
     {
-      "name": "v0.1.0",
-      "tag": "v0.1.0",
-      "height": 1,
-      "recommended_version": "v0.1.0",
-      "compatible_versions": ["v0.1.0"],
-      "cosmos_sdk_version": "v0.50.2",
-      "ibc_go_version": "v8.0.0",
-      "consensus": {
-        "type": "cometbft",
-        "version": "v0.38.2"
-      },
-      "binaries": {
-        "linux/amd64": "https://artifacts.poaiw.org/bin/pawd-linux-amd64",
-        "linux/arm64": "https://artifacts.poaiw.org/bin/pawd-linux-arm64",
-        "darwin/amd64": "https://artifacts.poaiw.org/bin/pawd-darwin-amd64",
-        "darwin/arm64": "https://artifacts.poaiw.org/bin/pawd-darwin-arm64"
-      }
+      "name": "v0",
+      "pawd_commit": "e2dadb18bf11a1dcfd65944b7319f9ab5503b32a",
+      "genesis_hash": "b149e5aa1869973bdcedcb808c340e97d3b0c951cb1243db901d84d3b3f659b5",
+      "cosmos_sdk_version": "v0.50.14",
+      "cometbft_version": "v0.38.17"
     }
   ]
 }

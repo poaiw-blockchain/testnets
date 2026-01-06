@@ -1,1 +1,2 @@
-0aa94130db435f9f46c2f1d295d45ebf6da89e02@54.39.103.49:26656
+# No public P2P peers are published for paw-testnet-1.
+# Nodes should connect via private VPN or contact the team for access.

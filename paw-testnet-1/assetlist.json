@@ -1,34 +1,17 @@
 {
-  "$schema": "../assetlist.schema.json",
-  "chain_name": "pawtestnet",
+  "chain_name": "paw-testnet-1",
   "assets": [
     {
-      "description": "The native staking and governance token of the PAW blockchain.",
+      "description": "PAW testnet staking token",
       "denom_units": [
-        {
-          "denom": "upaw",
-          "exponent": 0
-        },
-        {
-          "denom": "paw",
-          "exponent": 6
-        }
+        {"denom": "upaw", "exponent": 0},
+        {"denom": "paw", "exponent": 6}
       ],
       "base": "upaw",
       "name": "PAW",
       "display": "paw",
       "symbol": "PAW",
-      "logo_URIs": {
-        "png": "https://artifacts.poaiw.org/images/paw-logo.png",
-        "svg": "https://artifacts.poaiw.org/images/paw-logo.svg"
-      },
-      "keywords": [
-        "ai-compute",
-        "ibc",
-        "dex",
-        "staking"
-      ],
-      "type_asset": "sdk.coin"
+      "decimals": 6
     }
   ]
 }
