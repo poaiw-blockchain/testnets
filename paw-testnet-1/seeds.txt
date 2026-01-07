@@ -1,2 +1,4 @@
-# No public seed nodes are published for paw-testnet-1.
-# Nodes should connect via private VPN or contact the team for access.
+# PAW Testnet-1 Seed Nodes
+# Format: node_id@ip:port
+
+f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656
