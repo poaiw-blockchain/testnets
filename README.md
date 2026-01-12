@@ -1,12 +1,20 @@
-# PAW Networks
+# PAW Testnets
 
-This repository contains genesis files, configuration, and documentation for PAW development networks.
+Genesis files, configuration, and documentation for PAW blockchain networks.
+
+## Quick Start
+
+```bash
+curl -sL https://raw.githubusercontent.com/poaiw-blockchain/testnets/main/scripts/install.sh | bash
+```
+
+Or see [Join Testnet Guide](./docs/join-testnet.md) for manual installation.
 
 ## Active Networks
 
-| Network | Chain ID | Status |
-|---------|----------|--------|
-| [paw-testnet-1](./paw-testnet-1/) | `paw-testnet-1` | Active |
+| Network | Chain ID | Status | Genesis |
+|---------|----------|--------|---------|
+| [paw-testnet-1](./paw-testnet-1/) | `paw-testnet-1` | Active | [genesis.json](./paw-testnet-1/genesis.json) |
 
 ## Public Endpoints
 
@@ -16,20 +24,50 @@ This repository contains genesis files, configuration, and documentation for PAW
 | REST API | https://testnet-api.poaiw.org |
 | gRPC | testnet-grpc.poaiw.org:443 |
 | WebSocket | wss://testnet-ws.poaiw.org |
-| Prometheus Metrics | http://54.39.103.49:11660/metrics |
 | Explorer | https://testnet-explorer.poaiw.org |
 | Faucet | https://testnet-faucet.poaiw.org |
+| Snapshots | https://snapshots.poaiw.org |
+| Artifacts | https://artifacts.poaiw.org |
 
 ## Documentation
 
+### Getting Started
+
 | Guide | Description |
 |-------|-------------|
-| [Join Testnet](./docs/join-testnet.md) | How to join the testnet |
-| [Public Endpoints](./docs/public-endpoints.md) | Endpoint documentation |
+| [Join Testnet](./docs/join-testnet.md) | Quick start and sync methods |
+| [Hardware Requirements](./docs/hardware-requirements.md) | System specifications |
+| [Configuration](./docs/configuration.md) | Node configuration reference |
+
+### Node Operations
+
+| Guide | Description |
+|-------|-------------|
+| [Becoming a Validator](./docs/becoming-a-validator.md) | Validator setup guide |
 | [Monitoring](./docs/monitoring.md) | Prometheus/Grafana setup |
+| [Troubleshooting](./docs/troubleshooting.md) | Common issues and fixes |
+| [Public Endpoints](./docs/public-endpoints.md) | Endpoint documentation |
+
+## Artifacts
+
+| Resource | URL |
+|----------|-----|
+| Genesis | https://artifacts.poaiw.org/paw-testnet-1/genesis.json |
+| Peers | https://artifacts.poaiw.org/paw-testnet-1/peers.txt |
+| Address Book | https://artifacts.poaiw.org/paw-testnet-1/addrbook.json |
+| Latest Snapshot | https://snapshots.poaiw.org/paw-testnet-1/latest.tar.lz4 |
 
 ## Resources
 
-- [PAW Documentation](https://github.com/poaiw-blockchain/paw)
-- [Artifacts CDN](https://artifacts.poaiw.org)
-- Release artifacts policy: see `RELEASE_ARTIFACTS.md`.
+- [PAW Source Code](https://github.com/poaiw-blockchain/paw)
+- [PAW Documentation](https://github.com/poaiw-blockchain/paw/tree/main/docs)
+- [Discord](https://discord.gg/poaiw)
+- [Twitter](https://twitter.com/poaiw_blockchain)
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+## License
+
+Apache 2.0 - see [LICENSE](./LICENSE)

@@ -2,10 +2,18 @@
 
 **Chain ID:** `paw-testnet-1`
 **Status:** Active
-**Denom:** upaw (display: paw, 6 decimals)
+**Binary:** `pawd`
+**Denom:** upaw (display: PAW, 6 decimals)
+**Min Gas Price:** `0.001upaw`
 **Genesis SHA256:** `b149e5aa1869973bdcedcb808c340e97d3b0c951cb1243db901d84d3b3f659b5`
 
 [Website](https://poaiw.org) | [Discord](https://discord.gg/poaiw) | [Twitter](https://twitter.com/poaiw_blockchain) | [GitHub](https://github.com/poaiw-blockchain)
+
+## Quick Install
+
+```bash
+curl -sL https://raw.githubusercontent.com/poaiw-blockchain/testnets/main/scripts/install.sh | bash
+```
 
 ## Public Endpoints
 
