@@ -18,7 +18,7 @@
 | REST API | https://testnet-api.poaiw.org |
 | gRPC | testnet-grpc.poaiw.org:443 |
 | WebSocket | wss://testnet-ws.poaiw.org |
-| Prometheus Metrics | https://testnet-rpc.poaiw.org:11660/metrics |
+| Prometheus Metrics | http://54.39.103.49:11660/metrics |
 
 ## Explorer
 

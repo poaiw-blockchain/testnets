@@ -1,0 +1,60 @@
+name: Configuration Request
+description: Request a new configuration or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request changes to testnet configurations.
+
+        **For feature requests for PAW blockchain code**, please submit to the [main PAW repository](https://github.com/poaiw-blockchain/paw/issues).
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request Type
+      options:
+        - Add new peer/seed
+        - Update chain metadata
+        - Add IBC channel info
+        - New testnet network
+        - Documentation improvement
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: network
+    attributes:
+      label: Network
+      description: Which testnet does this apply to?
+      options:
+        - paw-testnet-1
+        - New network
+        - All networks
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe what you'd like to see added or changed
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional Details
+      description: |
+        For peer requests, include:
+        - Node ID
+        - IP address and port
+        - Geographic location (optional)
+      placeholder: |
+        Node ID: abc123...
+        Address: 1.2.3.4:26656
+        Location: US-East
+    validations:
+      required: false

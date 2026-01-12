@@ -15,7 +15,7 @@
       {"url": "wss://testnet-ws.poaiw.org", "provider": "PAW Foundation"}
     ],
     "metrics": [
-      {"url": "https://testnet-rpc.poaiw.org:11660/metrics", "provider": "PAW Foundation"}
+      {"url": "http://54.39.103.49:11660/metrics", "provider": "PAW Foundation"}
     ]
   },
   "explorers": [

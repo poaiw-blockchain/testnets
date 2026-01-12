@@ -1,0 +1,78 @@
+name: Network Issue Report
+description: Report an issue with testnet configuration or connectivity
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please provide as much detail as possible.
+
+        **For code bugs in PAW itself**, please report to the [main PAW repository](https://github.com/poaiw-blockchain/paw/issues).
+
+  - type: dropdown
+    id: network
+    attributes:
+      label: Network
+      description: Which testnet is affected?
+      options:
+        - paw-testnet-1
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      options:
+        - Peer connectivity issue
+        - Genesis file problem
+        - Chain metadata incorrect
+        - IBC configuration issue
+        - Documentation error
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: Clear description of what's wrong
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Try to connect to peer...
+        2. Observe error...
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Error Messages
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: node-version
+    attributes:
+      label: PAW Version
+      description: Output of `pawd version` (if applicable)
+      placeholder: "v1.0.0"
+    validations:
+      required: false

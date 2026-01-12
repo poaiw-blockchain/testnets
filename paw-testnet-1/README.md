@@ -15,7 +15,7 @@
 | REST API | https://testnet-api.poaiw.org | PAW Foundation |
 | gRPC | testnet-grpc.poaiw.org:443 | PAW Foundation |
 | WebSocket | wss://testnet-ws.poaiw.org | PAW Foundation |
-| Prometheus Metrics | https://testnet-rpc.poaiw.org:11660/metrics | PAW Foundation |
+| Prometheus Metrics | http://54.39.103.49:11660/metrics | PAW Foundation |
 | Explorer | https://testnet-explorer.poaiw.org | PAW Foundation |
 | Faucet | https://testnet-faucet.poaiw.org | PAW Foundation |
 
