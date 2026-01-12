@@ -1,0 +1,32 @@
+{
+  "chain_id": "paw-testnet-1",
+  "network_type": "testnet",
+  "endpoints": {
+    "rpc": [
+      {"url": "https://testnet-rpc.poaiw.org", "provider": "PAW Foundation"}
+    ],
+    "rest": [
+      {"url": "https://testnet-api.poaiw.org", "provider": "PAW Foundation"}
+    ],
+    "grpc": [
+      {"url": "testnet-grpc.poaiw.org:443", "provider": "PAW Foundation"}
+    ],
+    "websocket": [
+      {"url": "wss://testnet-ws.poaiw.org", "provider": "PAW Foundation"}
+    ],
+    "metrics": [
+      {"url": "https://testnet-rpc.poaiw.org:11660/metrics", "provider": "PAW Foundation"}
+    ]
+  },
+  "explorers": [
+    {"name": "PAW Explorer", "url": "https://testnet-explorer.poaiw.org"}
+  ],
+  "faucets": [
+    {"url": "https://testnet-faucet.poaiw.org"}
+  ],
+  "artifacts": {
+    "genesis": "https://artifacts.poaiw.org/paw-testnet-1/genesis.json",
+    "addrbook": "https://artifacts.poaiw.org/paw-testnet-1/addrbook.json",
+    "snapshot": "https://snapshots.poaiw.org/paw-testnet-1/latest.tar.lz4"
+  }
+}

@@ -1,19 +1,24 @@
 {
+  "$schema": "https://github.com/cosmos/chain-registry/blob/master/chain.schema.json",
   "chain_id": "paw-testnet-1",
-  "chain_name": "paw-testnet-1",
+  "chain_name": "PAW Testnet",
+  "pretty_name": "PAW Testnet",
   "status": "live",
   "network_type": "testnet",
-  "bech32_prefix": "pawtest",
+  "website": "https://poaiw.org",
+  "bech32_prefix": "paw",
   "daemon_name": "pawd",
-  "node_home": "~/.paw",
+  "node_home": "$HOME/.paw",
+  "key_algos": ["secp256k1"],
   "slip44": 118,
   "fees": {
     "fee_tokens": [
       {
         "denom": "upaw",
-        "low_gas_price": "0.01",
-        "average_gas_price": "0.025",
-        "high_gas_price": "0.05"
+        "fixed_min_gas_price": 0.001,
+        "low_gas_price": 0.01,
+        "average_gas_price": 0.025,
+        "high_gas_price": 0.05
       }
     ]
   },
@@ -24,32 +29,75 @@
   },
   "codebase": {
     "git_repo": "https://github.com/poaiw-blockchain/paw",
-    "recommended_version": "e2dadb18bf11a1dcfd65944b7319f9ab5503b32a",
+    "recommended_version": "v0.1.0",
+    "compatible_versions": ["v0.1.0"],
     "cosmos_sdk_version": "v0.50.14",
-    "cometbft_version": "v0.38.17"
+    "ibc_go_version": "v8.0.0",
+    "consensus": {
+      "type": "cometbft",
+      "version": "v0.38.17"
+    },
+    "binaries": {
+      "linux/amd64": "https://artifacts.poaiw.org/paw-testnet-1/pawd-linux-amd64"
+    },
+    "genesis": {
+      "genesis_url": "https://artifacts.poaiw.org/paw-testnet-1/genesis.json"
+    }
+  },
+  "peers": {
+    "seeds": [
+      {
+        "id": "f1499c319fed373f0625902009778c38dd89ff4a",
+        "address": "54.39.103.49:11656",
+        "provider": "PAW Foundation"
+      }
+    ],
+    "persistent_peers": [
+      {
+        "id": "f1499c319fed373f0625902009778c38dd89ff4a",
+        "address": "54.39.103.49:11656",
+        "provider": "PAW Foundation"
+      },
+      {
+        "id": "4d4ab236a6ab88eafe5a3745cc3a00c39cfe227a",
+        "address": "54.39.103.49:11756",
+        "provider": "PAW Foundation"
+      },
+      {
+        "id": "6dd222b005b7fa30d805d694cc1cd98276d7a976",
+        "address": "139.99.149.160:11856",
+        "provider": "PAW Foundation"
+      },
+      {
+        "id": "97801086479686da8ba49a8e3e0d1d4e4179abf1",
+        "address": "139.99.149.160:11956",
+        "provider": "PAW Foundation"
+      }
+    ]
   },
   "apis": {
     "rpc": [
-      {"address": "https://testnet-rpc.poaiw.org"}
+      {"address": "https://testnet-rpc.poaiw.org", "provider": "PAW Foundation"}
     ],
     "rest": [
-      {"address": "https://testnet-api.poaiw.org"}
+      {"address": "https://testnet-api.poaiw.org", "provider": "PAW Foundation"}
     ],
     "grpc": [
-      {"address": "testnet-grpc.poaiw.org:443"}
-    ],
-    "websocket": [
-      {"address": "wss://testnet-ws.poaiw.org"}
+      {"address": "testnet-grpc.poaiw.org:443", "provider": "PAW Foundation"}
     ]
   },
   "explorers": [
-    {"kind": "explorer", "url": "https://testnet-explorer.poaiw.org"}
+    {
+      "kind": "PAW Explorer",
+      "url": "https://testnet-explorer.poaiw.org",
+      "tx_page": "https://testnet-explorer.poaiw.org/tx/${txHash}",
+      "account_page": "https://testnet-explorer.poaiw.org/account/${accountAddress}"
+    }
   ],
-  "faucet": [
-    {"url": "https://testnet-faucet.poaiw.org"}
-  ],
-  "genesis": {
-    "genesis_url": "https://artifacts.poaiw.org/paw-testnet-1/genesis.json",
-    "genesis_hash": "b149e5aa1869973bdcedcb808c340e97d3b0c951cb1243db901d84d3b3f659b5"
-  }
+  "images": [
+    {
+      "png": "https://artifacts.poaiw.org/images/paw-logo.png",
+      "svg": "https://artifacts.poaiw.org/images/paw-logo.svg"
+    }
+  ]
 }
