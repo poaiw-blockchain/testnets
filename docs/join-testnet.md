@@ -101,14 +101,22 @@ pawd tendermint unsafe-reset-all --home ~/.paw --keep-addr-book
 # Stop node if running
 sudo systemctl stop pawd
 
+# Backup validator state (if validator)
+cp ~/.paw/data/priv_validator_state.json ~/.paw/priv_validator_state.json.backup
+
 # Download and extract snapshot
 cd ~/.paw
 rm -rf data
-curl -sL https://snapshots.poaiw.org/paw-testnet-1/latest.tar.lz4 | lz4 -dc | tar -xf -
+curl -L https://snapshots.poaiw.org/latest.tar.lz4 | lz4 -dc - | tar xf -
+
+# Restore validator state (if validator)
+cp ~/.paw/priv_validator_state.json.backup ~/.paw/data/priv_validator_state.json
 
 # Start node
 sudo systemctl start pawd
 ```
+
+See [SNAPSHOTS.md](../paw-testnet-1/SNAPSHOTS.md) for more details.
 
 ### Option 3: Genesis Sync (Slow, hours-days)
 
