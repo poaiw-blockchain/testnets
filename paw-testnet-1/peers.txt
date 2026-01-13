@@ -1,10 +1,17 @@
-# PAW Testnet-1 Persistent Peers
-# Format: node_id@ip:port
+# PAW Testnet-1 Peers Configuration
+# Generated: 2026-01-13
+#
+# IMPORTANT: External nodes should connect to the sentry node, not directly to validators.
+# The sentry node protects validators from DDoS attacks.
+#
+# Sentry Node (recommended for external peers):
+#   sentry1: services-testnet (139.99.149.160) - P2P 12056, RPC 12057, gRPC 12090
 
-f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656
-4d4ab236a6ab88eafe5a3745cc3a00c39cfe227a@54.39.103.49:11756
-6dd222b005b7fa30d805d694cc1cd98276d7a976@139.99.149.160:11856
-97801086479686da8ba49a8e3e0d1d4e4179abf1@139.99.149.160:11956
+# Recommended peer for external nodes (sentry node):
+ce6afbda0a4443139ad14d2b856cca586161f00d@139.99.149.160:12056
 
-# Comma-separated for config.toml:
-# f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656,4d4ab236a6ab88eafe5a3745cc3a00c39cfe227a@54.39.103.49:11756,6dd222b005b7fa30d805d694cc1cd98276d7a976@139.99.149.160:11856,97801086479686da8ba49a8e3e0d1d4e4179abf1@139.99.149.160:11956
+# For config.toml:
+# persistent_peers = "ce6afbda0a4443139ad14d2b856cca586161f00d@139.99.149.160:12056"
+
+# Note: Validator peers are intentionally not listed here.
+# Validators are protected behind the sentry node architecture.
