@@ -16,7 +16,7 @@ This repository contains network configurations for PAW testnets:
 ### Adding Your Validator/Node as a Peer
 
 1. Fork this repository
-2. Add your peer information to `paw-testnet-1/peers.txt`:
+2. Add your peer information to `paw-mvp-1/peers.txt`:
    ```
    <node_id>@<ip>:<port>
    ```

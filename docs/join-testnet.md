@@ -1,6 +1,6 @@
 # Join PAW Testnet
 
-**Chain ID:** `paw-testnet-1`
+**Chain ID:** `paw-mvp-1`
 
 ## Quick Start (Recommended)
 
@@ -55,10 +55,10 @@ pawd version
 ### Initialize Node
 
 ```bash
-pawd init my-node --chain-id paw-testnet-1
+pawd init my-node --chain-id paw-mvp-1
 
 # Download genesis
-curl -sL https://raw.githubusercontent.com/poaiw-blockchain/testnets/main/paw-testnet-1/genesis.json > ~/.paw/config/genesis.json
+curl -sL https://raw.githubusercontent.com/poaiw-blockchain/testnets/main/paw-mvp-1/genesis.json > ~/.paw/config/genesis.json
 
 # Verify checksum
 sha256sum ~/.paw/config/genesis.json
@@ -67,11 +67,12 @@ sha256sum ~/.paw/config/genesis.json
 
 ### Configure Peers
 
-```bash
-SEEDS="f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656"
-PEERS="f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656,4d4ab236a6ab88eafe5a3745cc3a00c39cfe227a@54.39.103.49:11756"
+Connect to public sentry nodes (validators are protected behind sentries):
 
-sed -i "s/^seeds *=.*/seeds = \"$SEEDS\"/" ~/.paw/config/config.toml
+```bash
+# Sentry nodes for external connections
+PEERS="38510c172e324f25e6fe8d9938d713bcaed924af@54.39.103.49:12056,ce6afbda0a4443139ad14d2b856cca586161f00d@139.99.149.160:12056"
+
 sed -i "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.paw/config/config.toml
 sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0.001upaw"/' ~/.paw/config/app.toml
 ```
@@ -107,10 +108,16 @@ cp ~/.paw/data/priv_validator_state.json ~/.paw/priv_validator_state.json.backup
 # Download and extract snapshot
 cd ~/.paw
 rm -rf data
+<<<<<<< Updated upstream
 curl -L https://snapshots.poaiw.org/latest.tar.lz4 | lz4 -dc - | tar xf -
 
 # Restore validator state (if validator)
 cp ~/.paw/priv_validator_state.json.backup ~/.paw/data/priv_validator_state.json
+||||||| Stash base
+curl -sL https://snapshots.poaiw.org/paw-testnet-1/latest.tar.lz4 | lz4 -dc | tar -xf -
+=======
+curl -sL https://snapshots.poaiw.org/paw-mvp-1/latest.tar.lz4 | lz4 -dc | tar -xf -
+>>>>>>> Stashed changes
 
 # Start node
 sudo systemctl start pawd

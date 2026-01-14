@@ -1,48 +1,56 @@
 # PAW Testnets Repository
 
+**Active Network:** `paw-mvp-1`
+
 ## Repository Separation
 
-**This repo (`paw-testnets/`)** → github:poaiw-blockchain/testnets (network config)
+**This repo (`testnets/`)** → github:poaiw-blockchain/testnets (network config)
 **Main repo (`paw/`)** → github:poaiw-blockchain/paw (source code)
 
-### Save HERE (paw-testnets/<chain-id>/)
-- genesis.json - network genesis file
-- chain.json - chain registry metadata
-- assetlist.json - token metadata
-- versions.json - upgrade history
-- peers.txt, seeds.txt - node addresses
-- config/app.toml, config/config.toml - reference configs
-- SNAPSHOTS.md, state_sync.md, IBC.md - sync/IBC guides
-- _IBC/*.json - IBC channel metadata
-- README.md - network-specific docs
-- bin/SHA256SUMS - binary checksums
+### Save HERE (testnets/paw-mvp-1/)
+- genesis.json, chain.json, assetlist.json, versions.json
+- peers.txt - public sentry peers
+- ARCHITECTURE.md - network topology
+- README.md - quickstart guide
 
 ### Save to MAIN REPO (paw/)
-- Go source code, modules (compute, dex, oracle), CLI
-- Protobuf definitions
-- Tests, Makefiles, Dockerfiles
-- General documentation
+- Go source code, modules, CLI, Protobuf, Tests
 
-## Health Check
-Run `~/blockchain-projects/scripts/testnet-health-check.sh` for all testnets.
+## Current Network Status
 
-## Port Configuration (PAW Testnet - Port Range 11000-11999)
+**Chain ID:** `paw-mvp-1`
+**Validators:** 4 active (val1-val4)
+**Sentries:** 2 public (sentry1, sentry2)
 
-**4-Validator Setup** with staged deployment (2→3→4 validators)
+## Node Configuration
 
-### Validator Ports (paw-testnet / 10.10.0.2)
-| Validator | RPC | P2P | gRPC | REST | Prometheus |
-|-----------|-----|-----|------|------|------------|
-| Val 1 | 11657 | 11656 | 11090 | 11317 | 11660 |
-| Val 2 | 11757 | 11756 | 11190 | 11417 | 11760 |
+### paw-testnet Server (54.39.103.49 / VPN: 10.10.0.2)
 
-### Validator Ports (services-testnet / 10.10.0.4)
-| Validator | RPC | P2P | gRPC | REST | Prometheus |
-|-----------|-----|-----|------|------|------------|
-| Val 3 | 11857 | 11856 | 11290 | 11517 | 11860 |
-| Val 4 | 11957 | 11956 | 11390 | 11617 | 11960 |
+| Node | Type | P2P | RPC | Node ID |
+|------|------|-----|-----|---------|
+| val1 | Validator | 11656 | 11657 | `945dfd111e231525f722a32d24de0da28dade0e8` |
+| val2 | Validator | 11756 | 11757 | `35c1a40debd4a455a37a56cee7adbaaffb0778f8` |
+| sentry1 | Sentry | 12056 | 12057 | `38510c172e324f25e6fe8d9938d713bcaed924af` |
 
-### Public Endpoints
+### services-testnet Server (139.99.149.160 / VPN: 10.10.0.4)
+
+| Node | Type | P2P | RPC | Node ID |
+|------|------|-----|-----|---------|
+| val3 | Validator | 11856 | 11857 | `a2b9ab78b0be7f006466131b44ede9a02fc140c4` |
+| val4 | Validator | 11956 | 11957 | `f8187d5bafe58b78b00d73b0563b65ad8c0d5fda` |
+| sentry2 | Sentry | 12056 | 12057 | `ce6afbda0a4443139ad14d2b856cca586161f00d` |
+
+## Public Peers (For External Nodes)
+
+Connect to SENTRY nodes only (validators are protected):
+
+```
+38510c172e324f25e6fe8d9938d713bcaed924af@54.39.103.49:12056
+ce6afbda0a4443139ad14d2b856cca586161f00d@139.99.149.160:12056
+```
+
+## Public Endpoints
+
 | Service | URL |
 |---------|-----|
 | RPC | https://testnet-rpc.poaiw.org |
@@ -51,13 +59,12 @@ Run `~/blockchain-projects/scripts/testnet-health-check.sh` for all testnets.
 | Explorer | https://testnet-explorer.poaiw.org |
 | Faucet | https://testnet-faucet.poaiw.org |
 
-### Service Ports
-| Service | Port |
-|---------|------|
-| Explorer API | 11080 |
-| Faucet API | 11081 |
-| WS Proxy | 11082 |
-| GraphQL | 11400 |
-| cosmos-exporter | 11300 |
+## Health Check
 
-See `paw-testnet-1/TESTNET_SETUP.md` for full deployment checklist.
+```bash
+# Quick height check
+ssh paw-testnet "curl -s http://127.0.0.1:11657/status | jq -r '.result.sync_info.latest_block_height'"
+ssh services-testnet "curl -s http://127.0.0.1:11857/status | jq -r '.result.sync_info.latest_block_height'"
+```
+
+See `paw-mvp-1/ARCHITECTURE.md` for full network topology.

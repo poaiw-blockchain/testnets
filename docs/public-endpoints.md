@@ -4,7 +4,7 @@
 
 | Property | Value |
 |----------|-------|
-| Chain ID | `paw-testnet-1` |
+| Chain ID | `paw-mvp-1` |
 | Version | v0.1.0 |
 | Status | Active |
 | Cosmos SDK | v0.50.14 |
@@ -50,7 +50,7 @@ f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656
 
 **Address Book:**
 ```bash
-curl -sL https://artifacts.poaiw.org/paw-testnet-1/addrbook.json > ~/.paw/config/addrbook.json
+curl -sL https://artifacts.poaiw.org/paw-mvp-1/addrbook.json > ~/.paw/config/addrbook.json
 ```
 
 ## Useful Commands

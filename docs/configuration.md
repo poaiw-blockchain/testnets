@@ -4,7 +4,7 @@
 
 | Parameter | Value |
 |-----------|-------|
-| Chain ID | `paw-testnet-1` |
+| Chain ID | `paw-mvp-1` |
 | Binary | `pawd` |
 | Denom | `upaw` (display: PAW, 6 decimals) |
 | Min Gas Price | `0.001upaw` |

@@ -29,7 +29,7 @@ body:
       label: Network
       description: Which testnet does this apply to?
       options:
-        - paw-testnet-1
+        - paw-mvp-1
         - New network
         - All networks
     validations:

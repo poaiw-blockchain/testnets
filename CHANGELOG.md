@@ -18,15 +18,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [1.0.0] - 2026-01-07
 
 ### Added
-- Initial release of `paw-testnet-1` network configuration
-- Genesis file for paw-testnet-1
+- Initial release of `paw-mvp-1` network configuration
+- Genesis file for paw-mvp-1
 - Chain registry metadata (chain.json, assetlist.json)
 - Initial peer and seed node information
 - Network documentation (README, state sync, snapshots)
 - IBC channel configurations
 
 ### Network Details
-- **Chain ID**: paw-testnet-1
+- **Chain ID**: paw-mvp-1
 - **Genesis Time**: 2026-01-07
 - **Initial Validators**: 4
 

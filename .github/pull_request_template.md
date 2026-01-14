@@ -13,7 +13,7 @@
 
 ## Network
 
-- [ ] paw-testnet-1
+- [ ] paw-mvp-1
 - [ ] Other: ___
 
 ## Checklist

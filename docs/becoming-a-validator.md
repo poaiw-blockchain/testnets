@@ -43,7 +43,7 @@ pawd tx staking create-validator \
   --amount=1000000upaw \
   --pubkey=$(pawd tendermint show-validator) \
   --moniker="your-validator-name" \
-  --chain-id=paw-testnet-1 \
+  --chain-id=paw-mvp-1 \
   --commission-rate="0.10" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \
@@ -73,7 +73,7 @@ pawd tx staking edit-validator \
   --moniker="new-name" \
   --website="https://your-website.com" \
   --details="Your validator description" \
-  --chain-id=paw-testnet-1 \
+  --chain-id=paw-mvp-1 \
   --from=validator
 ```
 
@@ -82,7 +82,7 @@ pawd tx staking edit-validator \
 ```bash
 pawd tx staking delegate $(pawd keys show validator --bech val -a) 1000000upaw \
   --from=validator \
-  --chain-id=paw-testnet-1
+  --chain-id=paw-mvp-1
 ```
 
 ### Unjail (if jailed)
@@ -90,7 +90,7 @@ pawd tx staking delegate $(pawd keys show validator --bech val -a) 1000000upaw \
 ```bash
 pawd tx slashing unjail \
   --from=validator \
-  --chain-id=paw-testnet-1 \
+  --chain-id=paw-mvp-1 \
   --gas=auto \
   --fees=5000upaw
 ```

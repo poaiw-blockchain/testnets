@@ -35,7 +35,7 @@ curl -s localhost:26657/status | jq '.result.sync_info'
 **Solutions:**
 1. Add more peers:
 ```bash
-PEERS=$(curl -s https://artifacts.poaiw.org/paw-testnet-1/peers.txt)
+PEERS=$(curl -s https://artifacts.poaiw.org/paw-mvp-1/peers.txt)
 sed -i "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.paw/config/config.toml
 sudo systemctl restart pawd
 ```
@@ -65,7 +65,7 @@ curl -s localhost:26657/net_info | jq '.result.n_peers'
 grep "^seeds" ~/.paw/config/config.toml
 
 # Download fresh address book
-curl -sL https://artifacts.poaiw.org/paw-testnet-1/addrbook.json > ~/.paw/config/addrbook.json
+curl -sL https://artifacts.poaiw.org/paw-mvp-1/addrbook.json > ~/.paw/config/addrbook.json
 sudo systemctl restart pawd
 
 # Check firewall
@@ -145,7 +145,7 @@ pawd query staking validator $(pawd keys show validator --bech val -a)
 ```bash
 pawd tx slashing unjail \
   --from validator \
-  --chain-id paw-testnet-1 \
+  --chain-id paw-mvp-1 \
   --gas auto \
   --gas-adjustment 1.5 \
   --fees 5000upaw

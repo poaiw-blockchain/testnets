@@ -11,7 +11,7 @@
 
 ## Testnet Requirements
 
-For joining `paw-testnet-1`:
+For joining `paw-mvp-1`:
 
 - **CPU**: 4+ cores @ 2.5 GHz (AVX2 required)
 - **RAM**: 16 GB minimum

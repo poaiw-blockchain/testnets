@@ -15,7 +15,7 @@ body:
       label: Network
       description: Which testnet is affected?
       options:
-        - paw-testnet-1
+        - paw-mvp-1
         - Other
     validations:
       required: true

@@ -4,13 +4,13 @@
 set -e
 
 # Configuration
-CHAIN_ID="paw-testnet-1"
+CHAIN_ID="paw-mvp-1"
 BINARY="pawd"
 HOME_DIR="$HOME/.paw"
 SEEDS="f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656"
 PEERS="f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656,4d4ab236a6ab88eafe5a3745cc3a00c39cfe227a@54.39.103.49:11756"
 RPC="https://testnet-rpc.poaiw.org:443"
-GENESIS_URL="https://raw.githubusercontent.com/poaiw-blockchain/testnets/main/paw-testnet-1/genesis.json"
+GENESIS_URL="https://raw.githubusercontent.com/poaiw-blockchain/testnets/main/paw-mvp-1/genesis.json"
 GENESIS_SHA256="b149e5aa1869973bdcedcb808c340e97d3b0c951cb1243db901d84d3b3f659b5"
 
 echo "================================"

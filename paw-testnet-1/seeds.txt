@@ -1,4 +1,0 @@
-# PAW Testnet-1 Seed Nodes
-# Format: node_id@ip:port
-
-f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656

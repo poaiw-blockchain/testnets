@@ -14,7 +14,7 @@ Or see [Join Testnet Guide](./docs/join-testnet.md) for manual installation.
 
 | Network | Chain ID | Status | Genesis |
 |---------|----------|--------|---------|
-| [paw-testnet-1](./paw-testnet-1/) | `paw-testnet-1` | Active | [genesis.json](./paw-testnet-1/genesis.json) |
+| [paw-mvp-1](./paw-mvp-1/) | `paw-mvp-1` | Active | [genesis.json](./paw-mvp-1/genesis.json) |
 
 ## Public Endpoints
 
@@ -52,10 +52,10 @@ Or see [Join Testnet Guide](./docs/join-testnet.md) for manual installation.
 
 | Resource | URL |
 |----------|-----|
-| Genesis | https://artifacts.poaiw.org/paw-testnet-1/genesis.json |
-| Peers | https://artifacts.poaiw.org/paw-testnet-1/peers.txt |
-| Address Book | https://artifacts.poaiw.org/paw-testnet-1/addrbook.json |
-| Latest Snapshot | https://snapshots.poaiw.org/paw-testnet-1/latest.tar.lz4 |
+| Genesis | https://artifacts.poaiw.org/paw-mvp-1/genesis.json |
+| Peers | https://artifacts.poaiw.org/paw-mvp-1/peers.txt |
+| Address Book | https://artifacts.poaiw.org/paw-mvp-1/addrbook.json |
+| Latest Snapshot | https://snapshots.poaiw.org/paw-mvp-1/latest.tar.lz4 |
 
 ## Resources
 
