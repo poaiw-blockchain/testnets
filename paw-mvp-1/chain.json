@@ -1,0 +1,113 @@
+{
+  "$schema": "https://github.com/cosmos/chain-registry/blob/master/chain.schema.json",
+  "chain_id": "paw-mvp-1",
+  "chain_name": "pawmvp",
+  "pretty_name": "PAW MVP Testnet",
+  "status": "live",
+  "network_type": "testnet",
+  "website": "https://poaiw.org",
+  "bech32_prefix": "paw",
+  "daemon_name": "pawd",
+  "node_home": "$HOME/.paw",
+  "key_algos": ["secp256k1"],
+  "slip44": 118,
+  "fees": {
+    "fee_tokens": [
+      {
+        "denom": "upaw",
+        "fixed_min_gas_price": 0.001,
+        "low_gas_price": 0.01,
+        "average_gas_price": 0.025,
+        "high_gas_price": 0.05
+      }
+    ]
+  },
+  "staking": {
+    "staking_tokens": [
+      {"denom": "upaw"}
+    ]
+  },
+  "codebase": {
+    "git_repo": "https://github.com/poaiw-blockchain/paw",
+    "recommended_version": "v1.0.0-mvp",
+    "compatible_versions": ["v1.0.0-mvp"],
+    "cosmos_sdk_version": "v0.50.14",
+    "ibc_go_version": "v8.0.0",
+    "consensus": {
+      "type": "cometbft",
+      "version": "v0.38.17"
+    },
+    "binaries": {
+      "linux/amd64": "https://artifacts.poaiw.org/mvp/v1.0.0-mvp/pawd-linux-amd64",
+      "linux/arm64": "https://artifacts.poaiw.org/mvp/v1.0.0-mvp/pawd-linux-arm64",
+      "darwin/amd64": "https://artifacts.poaiw.org/mvp/v1.0.0-mvp/pawd-darwin-amd64",
+      "darwin/arm64": "https://artifacts.poaiw.org/mvp/v1.0.0-mvp/pawd-darwin-arm64"
+    },
+    "genesis": {
+      "genesis_url": "https://artifacts.poaiw.org/mvp/genesis.json"
+    }
+  },
+  "description": "PAW MVP testnet with core IBC functionality. DEX, Compute, and Oracle modules are disabled at genesis and can be enabled via governance.",
+  "peers": {
+    "seeds": [],
+    "persistent_peers": [
+      {
+        "id": "38510c172e324f25e6fe8d9938d713bcaed924af",
+        "address": "54.39.103.49:12056",
+        "provider": "PAW Foundation (sentry1)"
+      },
+      {
+        "id": "ce6afbda0a4443139ad14d2b856cca586161f00d",
+        "address": "139.99.149.160:12056",
+        "provider": "PAW Foundation (sentry2)"
+      }
+    ]
+  },
+  "apis": {
+    "rpc": [
+      {"address": "https://testnet-rpc.poaiw.org", "provider": "PAW Foundation (sentry1)"},
+      {"address": "https://testnet-rpc-2.poaiw.org", "provider": "PAW Foundation (sentry2)"}
+    ],
+    "rest": [
+      {"address": "https://testnet-api.poaiw.org", "provider": "PAW Foundation (sentry1)"},
+      {"address": "https://testnet-api-2.poaiw.org", "provider": "PAW Foundation (sentry2)"}
+    ],
+    "grpc": [
+      {"address": "testnet-grpc.poaiw.org:443", "provider": "PAW Foundation"}
+    ]
+  },
+  "explorers": [
+    {
+      "kind": "ping.pub",
+      "url": "https://explorer.poaiw.org/paw",
+      "tx_page": "https://explorer.poaiw.org/paw/tx/${txHash}",
+      "account_page": "https://explorer.poaiw.org/paw/account/${accountAddress}"
+    },
+    {
+      "kind": "PAW Explorer",
+      "url": "https://testnet-explorer.poaiw.org",
+      "tx_page": "https://testnet-explorer.poaiw.org/tx/${txHash}",
+      "account_page": "https://testnet-explorer.poaiw.org/account/${accountAddress}"
+    }
+  ],
+  "images": [
+    {
+      "png": "https://artifacts.poaiw.org/images/paw-logo.png",
+      "svg": "https://artifacts.poaiw.org/images/paw-logo.svg"
+    }
+  ],
+  "mvp_config": {
+    "enabled_modules": ["auth", "bank", "staking", "slashing", "distribution", "gov", "ibc", "transfer"],
+    "disabled_modules": {
+      "dex": {"enabled": false, "enable_via": "governance"},
+      "compute": {"enabled": false, "enable_via": "governance"},
+      "oracle": {"enabled": false, "enable_via": "governance"}
+    },
+    "genesis_params": {
+      "max_gas": "100000000",
+      "signed_blocks_window": "10000",
+      "min_signed_per_window": "0.05",
+      "slash_fraction_downtime": "0.0001"
+    }
+  }
+}

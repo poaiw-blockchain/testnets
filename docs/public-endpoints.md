@@ -5,12 +5,16 @@
 | Property | Value |
 |----------|-------|
 | Chain ID | `paw-mvp-1` |
-| Version | v0.1.0 |
+| Version | v1.0.0-mvp |
 | Status | Active |
 | Cosmos SDK | v0.50.14 |
 | CometBFT | v0.38.17 |
 
+**Links**: [Website](https://poaiw.org) | [Discord](https://discord.gg/poaiw) | [GitHub](https://github.com/poaiw-blockchain)
+
 ## Public Endpoints
+
+### Primary Endpoints (paw-testnet / sentry1)
 
 | Service | URL |
 |---------|-----|
@@ -18,34 +22,30 @@
 | REST API | https://testnet-api.poaiw.org |
 | gRPC | testnet-grpc.poaiw.org:443 |
 | WebSocket | wss://testnet-ws.poaiw.org |
-| Prometheus Metrics | http://54.39.103.49:11660/metrics |
 
-## Explorer
+### Secondary Endpoints (services-testnet / sentry2)
 
-https://testnet-explorer.poaiw.org
+| Service | URL |
+|---------|-----|
+| RPC | https://testnet-rpc-2.poaiw.org |
+| REST API | https://testnet-api-2.poaiw.org |
 
-## Faucet
+## Explorer & Tools
 
-https://testnet-faucet.poaiw.org
+| Service | URL |
+|---------|-----|
+| Explorer (Ping.pub) | https://explorer.poaiw.org/paw |
+| Legacy Explorer | https://testnet-explorer.poaiw.org |
+| Faucet | https://testnet-faucet.poaiw.org |
 
 ## Peering
 
-**State-sync RPC:**
-```
-testnet-rpc.poaiw.org:443
-```
+Connect to sentry nodes (NOT validators directly):
 
-**Seeds:**
+### Persistent Peers
 ```
-f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656
-```
-
-**Persistent Peers:**
-```
-f1499c319fed373f0625902009778c38dd89ff4a@54.39.103.49:11656
-4d4ab236a6ab88eafe5a3745cc3a00c39cfe227a@54.39.103.49:11756
-6dd222b005b7fa30d805d694cc1cd98276d7a976@139.99.149.160:11856
-97801086479686da8ba49a8e3e0d1d4e4179abf1@139.99.149.160:11956
+38510c172e324f25e6fe8d9938d713bcaed924af@54.39.103.49:12056
+ce6afbda0a4443139ad14d2b856cca586161f00d@139.99.149.160:12056
 ```
 
 **Address Book:**
